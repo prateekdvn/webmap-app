@@ -5,7 +5,7 @@ import MapComponent from './MapComponent';
 import logo from './image.png';
 import curr from './currency.png';
 import lang from './language.png';
-import profileImage from './person.jpg';
+import profileImage from './person.png';
 
 const App = () => {
   const [currDropdownOpen, setCurrDropdownOpen] = useState(false);
@@ -57,6 +57,7 @@ const App = () => {
         )
       ),
 
+      // Profile dropdown
       React.createElement('div', { className: 'dropdown' },
       React.createElement('img', { src: profileImage, className: 'profile', alt: 'Aditya Jain', onClick: toggleProfileDropdown }),
       React.createElement('span', {onClick: toggleProfileDropdown}, 'Aditya Jain'),
