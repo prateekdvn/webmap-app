@@ -25,7 +25,7 @@ const MapComponent = () => {
     };
   }, []); 
 
-  return React.createElement('div', { id: 'map', style: { width: '100%', height: '100vh' } });
+  return React.createElement('div', { id: 'map', style: { width: '100%', height: '92vh' } });
 };
 
 export default MapComponent;
