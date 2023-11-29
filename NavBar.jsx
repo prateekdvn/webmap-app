@@ -4,9 +4,9 @@ import logo from './maruti-logo.png';
 import curr from './currency.png';
 import lang from './language.png';
 import profileImage from './person.png';
-import arrow from './down-arrow.png';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const NavBar = () => {
+const NavBar = ({ isSidebarOpen, toggleSidebar }) => {
   const [currDropdownOpen, setCurrDropdownOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -29,8 +29,13 @@ const NavBar = () => {
 
   return (
     <div className="top-bar">
-      <img src={logo} className="logo" alt="" />
+      {/* Sidebar toggle button */}
+      <button className="toggle-sidebar-button" onClick={toggleSidebar}>
+        ☰
+      </button>
       
+      <img src={logo} className="logo" alt="" />
+
       {/* Currency dropdown */}
       <div className="dropdown">
         <img src={curr} className="curr" alt="" onClick={toggleCurrDropdown} />
@@ -58,7 +63,7 @@ const NavBar = () => {
       <div className="dropdown">
         <img src={profileImage} className="profile" alt="Aditya Jain" onClick={toggleProfileDropdown} />
         <span onClick={toggleProfileDropdown} className="profile-name">Aditya Jain</span>
-        <img src={arrow} className='arrow' onClick={toggleProfileDropdown} />
+        <KeyboardArrowDownIcon onClick={toggleProfileDropdown} />
         {profileDropdownOpen && (
           <div className="dropdown-content">
             <p>My Profile</p>
