@@ -1,27 +1,57 @@
 .sidebar {
-    width: 200px;
+    width: 25%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
-    padding-top: 20px;
-    color: white;
+    background-color: #fff;
+    padding-top: 4vh;
+    color: black;
     transition: transform 0.3s ease-in-out; 
     transform: translateX(-100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  .sidebar.open {
-    transform: translateX(0); 
+  .sidebar-firstrow, .sidebar-secondrow, .sidebar-thirdrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .sidebar .dropdown {
-    padding: 10px;
-    cursor: pointer;
-    color: white;
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar-dropdown {
+    margin: 10px 10px 10px 15px;
   }
   
-  .sidebar .dropdown-content {
+  .dropdown-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .sidebar-dropdown select {
+    width: 100%;
+    padding: 3px 1px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+  }
+  
+  .dropdown-content {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -31,29 +61,49 @@
     z-index: 1;
   }
   
-  .sidebar .dropdown:hover .dropdown-content {
+  .sidebar-dropdown:hover .dropdown-content {
     display: flex;
   }
   
-  .sidebar .dropdown-content p {
+  .dropdown-content p {
     padding: 10px;
     text-decoration: none;
     display: block;
+    color: black;
   }
   
-  .sidebar .dropdown-content p:hover {
+  .dropdown-content p:hover {
     background-color: #555;
+    color: #fff;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 100px;
+    background: #171C8F;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 100%;
+    font-weight: 500;
+    cursor: pointer;
   }
 
-  .sidebar .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
+  .button:hover {
+    background: darkblue;
   }
   
+  .button:active {
+    background: #000435;
+  }
   
+  .button_text {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 20px;
+      color: #fff;
+      height: 100%;
+  }
