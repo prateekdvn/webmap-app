@@ -1,8 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './SideBar.css';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
 const SideBar = ({ isSidebarOpen, onCloseSidebar }) => {
+
+    const [selectedMonth, setSelectedMonth] = useState(null);
+    const [selectedFYYear, setSelectedFYYear] = useState(null);
+    
+    const handleMonthChange = (date) => {
+        setSelectedMonth(date);
+      };
+    
+      const handleFYYearChange = (date) => {
+        setSelectedFYYear(date);
+      };
+
+      const handleSearch = () => {
+        console.log('Searching...', selectedMonth, selectedFYYear);
+      };
+
   return (
     <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
       
@@ -91,6 +109,40 @@ const SideBar = ({ isSidebarOpen, onCloseSidebar }) => {
             <span className='button_text'>Reset</span>
         </button>
     </div>
+
+      {/* New Component for Month and FY Year */}
+      <h4>Total Sales</h4>
+      <div className='sidebar-fifthrow'>
+        <p>Sales Count: 20</p>
+        <div className='sidebar-dropdown'>
+            <button className='search-button' onClick={handleSearch}>
+            <span className='button_text'>Search</span>
+            </button>
+        </div>
+      </div>
+
+      <div className='sidebar-fourthrow'>
+        <div className='sidebar-dropdown'>
+        <label className='dropdown-label'>Count: </label>
+                <DatePicker
+                selected={selectedMonth}
+                onChange={handleMonthChange}
+                dateFormat='MMMM yyyy'
+                placeholderText='Month'
+                showMonthYearPicker
+                />
+        </div>
+
+        <div className='sidebar-dropdown'>
+            <DatePicker
+            selected={selectedFYYear}
+            onChange={handleFYYearChange}
+            dateFormat='yyyy'
+            placeholderText='FY Year'
+            showYearPicker
+            />
+        </div>
+      </div>
 
     </div>
   );

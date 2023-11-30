@@ -12,10 +12,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  .sidebar-firstrow, .sidebar-secondrow, .sidebar-thirdrow {
+  .sidebar-firstrow, .sidebar-secondrow, .sidebar-thirdrow, .sidebar-fourthrow, .sidebar-fifthrow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .sidebar-fourthrow {
+    box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.31);
   }
 
   .sidebar.open {
@@ -25,6 +29,10 @@
 
   .sidebar-dropdown {
     margin: 10px 10px 10px 15px;
+  }
+
+  .sidebar-calender-dropdown {
+    margin: 5px 5px 5px 5px;
   }
   
   .dropdown-label {
@@ -40,6 +48,13 @@
     background-color: #f1f1f1;
   }
   
+  .sidebar-calender-dropdown select {
+    width: 20%;
+    padding: 2px 0.5px;
+    box-sizing: border-box;
+    background-color: black;
+  }
+
   .close-button {
     position: absolute;
     top: 10px;
@@ -51,7 +66,7 @@
     color: black;
   }
   
-  .dropdown-content {
+  .sidebar-dropdown-content {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -65,16 +80,33 @@
     display: flex;
   }
   
-  .dropdown-content p {
+  .sidebar-dropdown-content p {
     padding: 10px;
     text-decoration: none;
     display: block;
     color: black;
   }
   
-  .dropdown-content p:hover {
+  .sidebar-dropdown-content p:hover {
     background-color: #555;
     color: #fff;
+  }
+  
+  .sidebar-fourthrow .sidebar-dropdown .react-datepicker-wrapper {
+    width: 45%; 
+  }
+  
+  .sidebar-fourthrow .sidebar-calender-dropdown .react-datepicker-wrapper {
+    width: 70%; 
+  }
+  
+  .react-datepicker__input-container input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150%;
+    box-sizing: border-box;
+    padding: 5px; 
   }
   
   .button {
@@ -92,7 +124,30 @@
     cursor: pointer;
   }
 
+  .search-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 1px;
+    background: #171C8F;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 100%;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
   .button:hover {
+    background: darkblue;
+  }
+  
+  .button:active {
+    background: #000435;
+  }
+
+  .search-button:hover {
     background: darkblue;
   }
   

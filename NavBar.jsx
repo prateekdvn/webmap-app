@@ -38,10 +38,10 @@ const NavBar = ({ isSidebarOpen, toggleSidebar }) => {
       <img src={logo} className="logo" alt="" />
 
       {/* Currency dropdown */}
-      <div className="dropdown">
+      <div className="navbar-dropdown">
         <img src={curr} className="curr" alt="" onClick={toggleCurrDropdown} />
         {currDropdownOpen && (
-          <div className="dropdown-content">
+          <div className="navbar-dropdown-content">
             <p>INR</p>
             <p>USD</p>
           </div>
@@ -49,10 +49,10 @@ const NavBar = ({ isSidebarOpen, toggleSidebar }) => {
       </div>
 
       {/* Language dropdown */}
-      <div className="dropdown">
+      <div className="navbar-dropdown">
         <img src={lang} className="lang" alt="" onClick={toggleLangDropdown} />
         {langDropdownOpen && (
-          <div className="dropdown-content">
+          <div className="navbar-dropdown-content">
             <p>Hindi</p>
             <p>English</p>
             <p>Japanese</p>
@@ -61,12 +61,12 @@ const NavBar = ({ isSidebarOpen, toggleSidebar }) => {
       </div>
 
       {/* Profile dropdown */}
-      <div className="dropdown">
+      <div className="navbar-dropdown">
         <img src={profileImage} className="profile" alt="Aditya Jain" onClick={toggleProfileDropdown} />
         <span onClick={toggleProfileDropdown} className="profile-name">Aditya Jain</span>
         <KeyboardArrowDownIcon onClick={toggleProfileDropdown} />
         {profileDropdownOpen && (
-          <div className="dropdown-content">
+          <div className="navbar-dropdown-content">
             <p>My Profile</p>
             <p>Log Out</p>
           </div>
