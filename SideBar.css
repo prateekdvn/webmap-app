@@ -10,9 +10,10 @@
     transition: transform 0.3s ease-in-out; 
     transform: translateX(-100%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 3.8%;
   }
   
-  .sidebar-firstrow, .sidebar-secondrow, .sidebar-thirdrow, .sidebar-fourthrow, .sidebar-fifthrow {
+  .sidebar-firstrow, .sidebar-secondrow, .sidebar-thirdrow, .sidebar-fourthrow, .sidebar-fifthrow, .sidebar-sixthrow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,6 +54,21 @@
     padding: 2px 0.5px;
     box-sizing: border-box;
     background-color: black;
+  }
+
+  .open-button {
+    display: flex;
+    position: absolute;
+    top: 20vh;
+    left: 100%;
+    font-size: 20px;
+    padding: 0.5vh 3vh;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
   .close-button {
@@ -162,3 +178,49 @@
       color: #fff;
       height: 100%;
   }
+
+  .sales-box {
+    background-color: #f1f1f1;
+    border-radius: 30%;
+    margin-left: 10%;
+    margin-top: 5px;
+    border: 10px solid #f1f1f1;
+  }
+
+  .navigation-button {
+    display: flex;
+    border: 2px #2F2A86;
+    padding: 5px 30px;
+    border-radius: 10%;
+  }
+
+  .navigation-button.selected {
+    border: 2px #2F2A86;
+  }
+
+  .navigation-button .button_text {
+    color: #97999B;
+    font-weight: 600;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal;
+    box-shadow: rgba(0, 0, 0, 0.31);
+  }
+  
+  .button_text.selected {
+    color: #2F2A86;
+  }
+
+  .multi-select-options {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+  }
+
+  .option-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    /* justify-content: space-between; */
+  }
+  

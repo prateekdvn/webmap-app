@@ -5,7 +5,6 @@ import curr from './currency.png';
 import lang from './language.png';
 import profileImage from './person.png';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 const NavBar = ({ isSidebarOpen, toggleSidebar }) => {
   const [currDropdownOpen, setCurrDropdownOpen] = useState(false);
@@ -29,12 +28,7 @@ const NavBar = ({ isSidebarOpen, toggleSidebar }) => {
   };
 
   return (
-    <div className="top-bar">
-      {/* Sidebar toggle button */}
-      <KeyboardDoubleArrowRightIcon className="toggle-sidebar-button" onClick={toggleSidebar}>
-      &times;
-      </KeyboardDoubleArrowRightIcon>
-      
+    <div className="top-bar">      
       <img src={logo} className="logo" alt="" />
 
       {/* Currency dropdown */}
